@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgriCare</title>
+  <link rel="stylesheet" href="AgriCare.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="form-container">
+      <div class="form-wrapper">
+        <!-- Login Form -->
+        <div class="form">
+          <h2>Welcome Back</h2>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <!-- Add inside your login form, before the login button -->
+<label for="role">Login as:</label>
+<select id="roleSelect">
+  <option value="farmer">Farmer</option>
+  <option value="expert">Expert</option>
+</select>
+          <button id="logoutBtn">Login</button>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form">
+          <h2>Create Account</h2>
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="side">
+      <h1>AgriCare</h1>
+      <p>Connecting farmers to expert advice and modern solutions.</p>
+      <button onclick="toggleForm()">Switch to <span id="toggleLabel">Sign Up</span></button>
+    </div>
+  </div>
+
+  <script src="AgriCaee.js"></script>
+</body>
+</html>

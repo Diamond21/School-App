@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgriCare Dashboard</title>
+  <link rel="stylesheet" href="Agripage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h1>🌿 AgriCare</h1>
+    <button class="logout-btn">Logout</button>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="main-content">
+    <section class="welcome">
+      <h2>Welcome, Farmer 👨‍🌾</h2>
+      <p>Need advice? Ask an expert below!</p>
+    </section>
+
+    <!-- Ask a Question -->
+    <section class="ask-form">
+      <textarea id="questionInput" placeholder="Type your agricultural question here..."></textarea>
+      <button onclick="submitQuestion()">Ask Expert</button>
+    </section>
+
+    <!-- Question Feed -->
+    <section class="question-feed">
+      <h3>Recent Questions & Answers</h3>
+      <div id="feed">
+        <!-- Questions will be added here -->
+      </div> 
+    </section>
+    <div class="modal" id="answerModal">
+      <div class="modal-content">
+        <h3>Answer the Question</h3>
+        <p id="currentQuestion"></p>
+        <textarea id="answerInput" placeholder="type your answer here...."></textarea>
+        <button onclick="submitAnswer()">Submit Answer</button>
+        <button class="cancel" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 AgriCare. Growing Together.</p>
+  </footer>
+
+  <script src="agripage.js"></script>
+
+  <!-- Expert List Section -->
+<section class="experts">
+  <h3>Available Experts</h3>
+  <div class="expert-list">
+    <button onclick="startChat('Dr. Green')">Dr. Green 🌱</button>
+    <button onclick="startChat('Prof. Soil')">Prof. Soil 🌾</button>
+    <button onclick="startChat('Ms. Leaf')">Ms. Leaf 🍀</button>
+  </div>
+</section>
+
+<!-- Chat Modal -->
+<div class="chat-modal" id="chatModal">
+  <div class="chat-box">
+    <div class="chat-header">
+      <h3 id="chatExpertName">Chat</h3>
+      <button onclick="closeChat()">X</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <!-- Chat messages will go here -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatMessage" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
